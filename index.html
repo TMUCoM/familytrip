@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中彰化．建築美學與海線慢旅 完整企劃</title>
+    <style>
+        :root { --primary: #2c3e50; --secondary: #e67e22; --accent: #3498db; --bg: #f4f7f6; }
+        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; line-height: 1.6; margin: 0; background-color: var(--bg); color: #333; }
+        header { background: linear-gradient(135deg, var(--primary), #34495e); color: white; padding: 25px 15px; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 15px; }
+        
+        /* Tab Styles */
+        .tabs { display: flex; overflow-x: auto; background: white; sticky: top; top: 0; z-index: 100; border-bottom: 2px solid var(--secondary); margin-bottom: 15px; }
+        .tab-btn { flex: 0 0 auto; width: 20%; padding: 15px 5px; border: none; background: none; font-weight: bold; color: #7f8c8d; cursor: pointer; }
+        .tab-btn.active { color: var(--secondary); border-bottom: 4px solid var(--secondary); background: #fff9f4; }
+
+        /* Content Card */
+        .content-card { display: none; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .content-card.active { display: block; animation: fadeIn 0.3s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 10px; margin-top: 0; }
+        h3 { color: var(--accent); border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        .transport-tag { background: var(--accent); color: white; padding: 3px 10px; border-radius: 20px; font-size: 13px; margin-bottom: 15px; display: inline-block; }
+        
+        /* Timeline */
+        .item { margin-bottom: 20px; border-bottom: 1px dashed #eee; padding-bottom: 15px; }
+        .time { font-weight: bold; color: var(--secondary); font-size: 1.1em; }
+        .place { font-weight: bold; font-size: 1.1em; margin: 5px 0; }
+        .desc { font-size: 0.95em; color: #555; }
+        
+        /* Info Table */
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; }
+        .info-table th, .info-table td { border: 1px solid #eee; padding: 10px; text-align: left; }
+        .info-table th { background: #f9f9f9; color: var(--primary); }
+
+        .tip-box { background: #fffdf0; border-left: 5px solid #f1c40f; padding: 15px; margin-top: 20px; border-radius: 4px; }
+        .highlight { color: #d35400; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="margin:0; font-size: 20px;">台中彰化．建築美學與海線慢旅</h1>
+    <p style="margin:5px 0 0 0; opacity: 0.9; font-size: 14px;">2026/04/09 (四) ～ 04/13 (一) 完整行程</p>
+</header>
+
+<div class="container">
+    <nav class="tabs">
+        <button class="tab-btn active" onclick="showDay(event, 'd1')">Day 1</button>
+        <button class="tab-btn" onclick="showDay(event, 'd2')">Day 2</button>
+        <button class="tab-btn" onclick="showDay(event, 'd3')">Day 3</button>
+        <button class="tab-btn" onclick="showDay(event, 'd4')">Day 4</button>
+        <button class="tab-btn" onclick="showDay(event, 'd5')">Day 5</button>
+    </nav>
+
+    <div id="d1" class="content-card active">
+        <span class="transport-tag">交通：Uber / 計程車 搭配大眾運輸</span>
+        <h2>4/09 (四) 集合與舊城風華</h2>
+        <div class="item">
+            <div class="time">12:00</div>
+            <div class="place">高鐵台中站集合</div>
+            <div class="desc">台北與花蓮親友匯合，搭乘計程車/包車前往市區飯店寄放行李。</div>
+        </div>
+        <div class="item">
+            <div class="time">13:30</div>
+            <div class="place">宮原眼科 & 第四信用合作社</div>
+            <div class="desc">欣賞日治時期紅磚建築，內部裝潢如哈利波特圖書館。推薦在此享用冰淇淋或下午茶。</div>
+        </div>
+        <div class="item">
+            <div class="time">15:30</div>
+            <div class="place">綠川水岸廊道</div>
+            <div class="desc">整治後的親水步道，適合長輩散步拍照，感受台中「小京都」氛圍。</div>
+        </div>
+        <div class="item">
+            <div class="time">17:30</div>
+            <div class="place">台中第二市場 (晚餐)</div>
+            <div class="desc">在地美食集中地（如山河魯肉飯），體驗老市場味道。</div>
+        </div>
+        <div class="tip-box">💡 溫馨提醒：第一天抵達建議步調放慢，早點入住飯店休息，為隔天體力做準備。</div>
+    </div>
+
+    <div id="d2" class="content-card">
+        <span class="transport-tag">交通：強烈建議包車 (九人座)</span>
+        <h2>4/10 (五) 彰化古韻與鐵道記憶</h2>
+        <div class="item">
+            <div class="time">10:30</div>
+            <div class="place">鹿港天后宮 & 鹿港老街</div>
+            <div class="desc">參拜國定古蹟媽祖廟，漫步紅磚古巷（九曲巷、半邊井），品嚐麵線糊、蚵仔煎。</div>
+        </div>
+        <div class="item">
+            <div class="time">13:30</div>
+            <div class="place">台灣玻璃館 (玻璃媽祖廟)</div>
+            <div class="desc">全台唯一玻璃廟宇，非常壯觀。位於彰濱工業區。</div>
+        </div>
+        <div class="item">
+            <div class="time">15:00</div>
+            <div class="place">彰化扇形車庫</div>
+            <div class="desc"><span class="highlight">必訪亮點！</span> 全台碩果僅存的火車頭旅館，見證蒸氣火車歷史。(注意：週一休館，平日下午開放)</div>
+        </div>
+        <div class="item">
+            <div class="time">16:30</div>
+            <div class="place">八卦山天空步道</div>
+            <div class="desc">平緩好走的空中步道，可遠眺彰化市景與大佛。</div>
+        </div>
+        <div class="item">
+            <div class="time">18:00</div>
+            <div class="place">晚餐：彰化肉圓</div>
+            <div class="desc">推薦北門口肉圓或阿三肉圓（酥脆外皮特色）。</div>
+        </div>
+    </div>
+
+    <div id="d3" class="content-card">
+        <span class="transport-tag">交通：強烈建議包車 (九人座)</span>
+        <h2>4/11 (六) 建築巡禮與海線夕陽</h2>
+        <div class="item">
+            <div class="time">09:30</div>
+            <div class="place">東海大學 路思義教堂</div>
+            <div class="desc">建築大師貝聿銘經典之作。校園優美，推薦至乳品小棧吃特色冰棒。</div>
+        </div>
+        <div class="item">
+            <div class="time">14:00</div>
+            <div class="place">梧棲文化出張所</div>
+            <div class="desc">日治時期派出所改建的古蹟民宿群，氛圍雅緻，非常適合拍照。</div>
+        </div>
+        <div class="item">
+            <div class="time">16:30</div>
+            <div class="place">高美濕地 (重點行程)</div>
+            <div class="desc"><span class="highlight">絕美夕陽！</span> 欣賞一生必遊的風車絕景。木棧道平坦好走，長輩可輕鬆親近大海。</div>
+        </div>
+        <div class="item">
+            <div class="time">18:30</div>
+            <div class="place">晚餐：輕井澤鍋物</div>
+            <div class="desc">返回市區，體驗台中知名的氣派裝潢火鍋文化（請記得預訂）。</div>
+        </div>
+        <div class="tip-box">💡 海邊提醒：海邊風大，請務必提醒長輩攜帶防風外套與帽子。</div>
+    </div>
+
+    <div id="d4" class="content-card">
+        <span class="transport-tag">交通：Uber / 計程車</span>
+        <h2>4/12 (日) 綠色美學與文創漫遊</h2>
+        <div class="item">
+            <div class="time">10:00</div>
+            <div class="place">台中綠美圖 (新地標)</div>
+            <div class="desc">妹島和世設計的森林系純白建築，結合圖書館與美術館，充滿通透感。</div>
+        </div>
+        <div class="item">
+            <div class="time">14:30</div>
+            <div class="place">台中國家歌劇院</div>
+            <div class="desc">伊東豊雄設計的「美聲涵洞」。參觀曲牆結構、文創店舖與頂樓空中花園。</div>
+        </div>
+        <div class="item">
+            <div class="time">16:30</div>
+            <div class="place">審計新村</div>
+            <div class="desc">老宿舍改建的文創聚落。推薦嘗試特色甜點（如泡芙、咖啡）。</div>
+        </div>
+        <div class="tip-box">💡 休息提醒：歌劇院室內有空調與多處座椅，長輩走累了隨時可以坐下休息。</div>
+    </div>
+
+    <div id="d5" class="content-card">
+        <span class="transport-tag">交通：計程車 / 大眾運輸</span>
+        <h2>4/13 (一) 日式慢活與賦歸</h2>
+        <div class="item">
+            <div class="time">10:00</div>
+            <div class="place">國家漫畫博物館 (刑務所演武場)</div>
+            <div class="desc">日治時期練武場，保留完整日式建築與大樹。環境清幽，適合長輩品茶拍照。</div>
+        </div>
+        <div class="item">
+            <div class="time">11:30</div>
+            <div class="place">台中文學館</div>
+            <div class="desc">欣賞壯觀的百年大榕樹與日式警察宿舍群。就在演武場附近。</div>
+        </div>
+        <div class="item">
+            <div class="time">12:30</div>
+            <div class="place">午餐：第五市場</div>
+            <div class="desc">品嚐在地古早味（蚵仔粥、麵線、丸子）。</div>
+        </div>
+        <div class="item">
+            <div class="time">14:30</div>
+            <div class="place">賦歸：前往高鐵台中站</div>
+            <div class="desc">在站內採買伴手禮，準備搭車返回溫暖的家。</div>
+        </div>
+    </div>
+
+    <div style="background: white; margin-top: 20px; padding: 20px; border-radius: 8px;">
+        <h3>🏛️ 核心景點特色快速查</h3>
+        <table class="info-table">
+            <tr><th>景點</th><th>特色簡介</th><th>對長輩的友善點</th></tr>
+            <tr><td>台中綠美圖</td><td>森林中的純白美術館</td><td>動線平緩、室內閱讀區可休息</td></tr>
+            <tr><td>高美濕地</td><td>台灣天空之鏡</td><td>平坦木棧道，免踩泥巴看大海</td></tr>
+            <tr><td>扇形車庫</td><td>全台唯一火車旅館</td><td>鐵道歷史回憶，園區小走逛輕鬆</td></tr>
+            <tr><td>鹿港老街</td><td>古僕紅磚建築</td><td>平路為主，邊走邊吃傳統點心</td></tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    function showDay(evt, dayId) {
+        var i, cards, btns;
+        cards = document.getElementsByClassName("content-card");
+        for (i = 0; i < cards.length; i++) { cards[i].style.display = "none"; }
+        btns = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < btns.length; i++) { btns[i].className = btns[i].className.replace(" active", ""); }
+        document.getElementById(dayId).style.display = "block";
+        evt.currentTarget.className += " active";
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
